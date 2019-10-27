@@ -1,0 +1,15 @@
+# 在application.yml中自定义一组属性,若需要读取配置文件的值只需要加@Value("${属性名}")
+my:
+ name: zc
+ age: 12
+ number:  ${random.int} # ${random},它可以用来生成各种不同类型的随机值
+ uuid : ${random.uuid}
+ max: ${random.int(10)}
+ value: ${random.value}
+ greeting: hi,i'm  ${my.name}
+
+spring:
+  profiles:
+    active: dev
+
+
